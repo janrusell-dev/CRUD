@@ -75,9 +75,6 @@ namespace CRUD
             lastNameBox.Text = "";
             ageBox.Value = 0;
             
-
-
-
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -130,17 +127,7 @@ namespace CRUD
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            SqlConnection con = new SqlConnection("Data Source=JRGENGRACIAL\\SQLEXPRESS;Initial Catalog=\"CRUD App DB\";Integrated Security=True;Pooling=False;Encrypt=False");
-            string readQuery = "SELECT * FROM Table_1";
-            SqlDataAdapter sda = new SqlDataAdapter(readQuery, con);
-            SqlCommandBuilder cmd = new SqlCommandBuilder(sda);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView.DataSource = dt; 
-            
-            con.Open();
-            ClearData();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
